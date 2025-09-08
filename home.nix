@@ -51,6 +51,7 @@ in
     unzip
     fzf
     kdePackages.dolphin
+		brightnessctl
 		libreoffice
   ];
   }

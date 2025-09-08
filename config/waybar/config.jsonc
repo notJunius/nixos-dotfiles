@@ -17,6 +17,8 @@
 
     "modules-right": [
         "custom/sep",
+				"battery",
+        "custom/sep",
         "network",
         "custom/sep",
         "cpu",
@@ -53,6 +55,7 @@
         // }
     },
     "clock": {
+				"format": "{:%I:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -75,7 +78,7 @@
         },
         "format": "Bat: {capacity}% {icon} {time}",
         "format-plugged": "{capacity}% ",
-        "format-alt": "Bat {capacity}%",
+        "format-alt": "Bat: {capacity}%",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""]
     },
