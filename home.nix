@@ -54,6 +54,8 @@ in
 		brightnessctl
 		libreoffice
 		obs-studio
+		okular
+		lua-language-server
   ];
   }
 
