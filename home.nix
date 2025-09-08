@@ -45,7 +45,6 @@ in
     nil
     nixpkgs-fmt
     nodejs
-    gcc
 		wofi
     xwallpaper
     unzip
@@ -54,8 +53,9 @@ in
 		brightnessctl
 		libreoffice
 		obs-studio
-		okular
+		kdePackages.okular
 		lua-language-server
+		ols
   ];
   }
 

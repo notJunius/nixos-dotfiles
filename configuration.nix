@@ -14,7 +14,10 @@
   time.timeZone = "America/Denver";
 
   services.xserver.displayManager.gdm.enable = true;
-	programs.hyprland.enable = true;
+	programs.hyprland = {
+	  enable = true;
+		xwayland.enable = true;
+	};
 	environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
 
@@ -27,7 +30,7 @@
     pulse.enable = true;
   };
 
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   users.users.junius = {
     isNormalUser = true;
@@ -46,12 +49,19 @@
 
   environment.systemPackages = with pkgs; [
     neovim
+		xorg.libX11
     wget
     git
     ghostty
 		hyprpaper
 		waybar
 		obsidian
+		clang
+		llvm
+		llvmPackages.llvm
+		gcc
+		gnumake
+		odin
   ];
 
   fonts.packages = with pkgs; [
