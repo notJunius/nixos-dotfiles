@@ -51,10 +51,12 @@
     ghostty
 		hyprpaper
 		waybar
+		obsidian
   ];
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+		nerd-fonts.iosevka
   ];
 
 

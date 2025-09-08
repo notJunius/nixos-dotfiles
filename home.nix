@@ -53,6 +53,7 @@ in
     kdePackages.dolphin
 		brightnessctl
 		libreoffice
+		obs-studio
   ];
   }
 
