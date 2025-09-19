@@ -5,8 +5,9 @@
   home.packages = with pkgs; [
     # Tools required for Telescope
     ripgrep
-    fd
     fzf
+    gcc
+    gnumake
 
     # Language Servers
     lua-language-server
