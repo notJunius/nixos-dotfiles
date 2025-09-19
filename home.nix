@@ -35,13 +35,6 @@ in
   };
 
   home.packages = with pkgs; [
-    neovim
-    ripgrep
-    fzf
-    nil
-    nixpkgs-fmt
-    nodejs
-    gcc
     unzip
   ];
 }
