@@ -1,7 +1,24 @@
 { config, pkgs, ... }:
 
 
+let
+    dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+    create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+    # Standard .config/directory
+    configs = {
+        qtile = "qtile";
+        nvim = "nvim";
+    };
+in
 {
+  imports = [
+    ./modules/neovim.nix
+  ];
+
+  xdg.configFile = builtins.mapAttrs (name: subpath: {
+      source = create_symlink "${dotfiles}/${subpath}";
+      recursive = true;
+  }) configs;
   home.username = "junius";
   home.homeDirectory = "/home/junius";
   programs.git = {
@@ -16,12 +33,11 @@
       btw = "echo I use nixos, btw";
     };
   };
-  home.file.".config/qtile".source = ./config/qtile;
-  home.file.".config/nvim".source = ./config/nvim;
 
   home.packages = with pkgs; [
     neovim
     ripgrep
+    fzf
     nil
     nixpkgs-fmt
     nodejs
