@@ -28,6 +28,10 @@
         src = ./config/dwm;
       };
     };
+    displayManager.sessionCommands = ''
+      xrandr --output DP-1 --auto --above eDP-1
+      xwallpaper --zoom ~/nixos-dotfiles/walls/garden.png;
+    '';
   };
   services.displayManager.ly.enable = true;
   services.picom.enable = true;
@@ -67,6 +71,7 @@
     wget
     git
     ghostty
+    feh
   ];
 
   programs.firefox.enable = true;

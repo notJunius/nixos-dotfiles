@@ -37,6 +37,9 @@ in
       btw = "echo I use nixos, btw";
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#atlas";
     };
+    initExtra = ''
+      export PS1="\[\e[38;5;75m\]\u@\h \[\e[38;5;113m\]\w \[\e[38;5;189m\]\$ \[\e[0m\]"
+    '';
   };
 
   home.packages = with pkgs; [
@@ -45,5 +48,7 @@ in
     rofi 
     slock
     xclip
+    xwallpaper
+    kdePackages.okular
   ];
 }
