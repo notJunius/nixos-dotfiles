@@ -39,5 +39,10 @@ in
   home.packages = with pkgs; [
     unzip
     pavucontrol
+    gcc
+    rofi 
+    dmenu
+    slock
+    xclip
   ];
 }
