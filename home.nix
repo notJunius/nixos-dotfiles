@@ -11,6 +11,9 @@ let
         dwm = "dwm";
         dmenu = "dmenu";
         st = "st";
+        hypr = "hypr";
+        ghostty = "ghostty";
+        waybar = "waybar";
     };
 in
 {
@@ -49,7 +52,7 @@ in
     slock
     xclip
     xwallpaper
-    kdePackages.okular
     libreoffice
+    zathura
   ];
 }

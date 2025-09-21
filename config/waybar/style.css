@@ -1,0 +1,94 @@
+@import "mocha.css";
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background-color: shade(@base, 0.9);
+    color: @pink;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: @blue;
+    background: transparent;
+    border-bottom: 3px solid @text;
+}
+#workspaces button.active {
+    color: @blue;
+    border-bottom: 3px solid @blue;
+}
+#workspaces button.empty {
+    color: @text;
+}
+#workspaces button.empty.active {
+    color: @text;
+    border-bottom: 3px solid @blue;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @text;
+}
+
+#custom-sep {
+    color: @rosewater;
+}
+
+#clock {
+    color: @sky;
+    border-bottom: 4px solid @sky;
+}
+
+#battery {
+    color: @green;
+    border-bottom: 4px solid @green;
+}
+
+#disk {
+    color: @yellow;
+    border-bottom: 4px solid @yellow;
+}
+
+#memory {
+    color: @lavender;
+    border-bottom: 4px solid @lavender;
+}
+
+#cpu {
+    color: @peach;
+    border-bottom: 4px solid @peach;
+}
+
+#network {
+    color: @blue;
+    border-bottom: 4px solid @blue;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+

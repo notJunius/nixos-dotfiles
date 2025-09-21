@@ -34,6 +34,8 @@
   };
   services.displayManager.ly.enable = true;
   services.picom.enable = true;
+  programs.hyprland.enable = true;
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -71,6 +73,12 @@
     git
     ghostty
     feh
+    hyprpaper
+    kitty
+    pavucontrol
+    waybar
+    wofi
+    kdePackages.dolphin
   ];
 
   programs.firefox.enable = true;
