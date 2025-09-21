@@ -50,5 +50,6 @@ in
     xclip
     xwallpaper
     kdePackages.okular
+    libreoffice
   ];
 }
