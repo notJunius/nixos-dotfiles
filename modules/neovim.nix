@@ -11,6 +11,7 @@
 
     # Language Servers
     lua-language-server
+    pyright
     nil # nix language server
     nixpkgs-fmt # nix formatter
 

@@ -37,5 +37,6 @@ in
 
   home.packages = with pkgs; [
     unzip
+    pavucontrol
   ];
 }

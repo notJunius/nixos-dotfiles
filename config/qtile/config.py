@@ -10,6 +10,7 @@ mod = "mod4"
 terminal = guess_terminal()
 
 myTerm = "alacritty"      # My terminal of choice
+myBrowser = "firefox"
 
 keys = [
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
@@ -41,9 +42,11 @@ keys = [
         desc="Toggle between split and unsplit sides of stack",
     ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
+    Key([mod], "p", lazy.spawn("pavucontrol"), desc="Launch pavucontrol"),
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "b", lazy.spawn(myBrowser), desc="launch firefox"),
     Key(
         [mod],
         "f",
