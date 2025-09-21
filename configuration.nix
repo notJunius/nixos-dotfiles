@@ -16,13 +16,21 @@
 
   time.timeZone = "America/Denver";
 
+  # when you have time, move all 'services.' to one block
   services.xserver = {
     enable = true;
     autoRepeatDelay = 200;
     autoRepeatInterval = 35;
     windowManager.qtile.enable = true;
+    windowManager.dwm = {
+      enable = true;
+      package = pkgs.dwm.overrideAttrs {
+        src = ./config/dwm;
+      };
+    };
   };
   services.displayManager.ly.enable = true;
+  services.picom.enable = true;
 
   i18n.defaultLocale = "en_US.UTF-8";
 
