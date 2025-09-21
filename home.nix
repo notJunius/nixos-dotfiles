@@ -9,11 +9,14 @@ let
         qtile = "qtile";
         nvim = "nvim";
         dwm = "dwm";
+        dmenu = "dmenu";
+        st = "st";
     };
 in
 {
   imports = [
     ./modules/neovim.nix
+    ./modules/suckless.nix
   ];
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
@@ -39,9 +42,7 @@ in
   home.packages = with pkgs; [
     unzip
     pavucontrol
-    gcc
     rofi 
-    dmenu
     slock
     xclip
   ];
