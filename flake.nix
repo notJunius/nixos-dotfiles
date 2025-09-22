@@ -25,7 +25,7 @@
         gcc
         gnumake
       ];
-    };
+      };
     nixosConfigurations.atlas = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
@@ -42,5 +42,4 @@
       ];
     };
   };
-
 }
