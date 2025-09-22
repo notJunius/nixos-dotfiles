@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "rose-pine-moon.css";
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -8,17 +8,17 @@
 
 window#waybar {
     background-color: shade(@base, 0.9);
-    color: @pink;
+    color: @text;
 }
 
 #workspaces button {
     padding: 0 6px;
-    color: @blue;
+    color: @pine;
     background: transparent;
     border-bottom: 3px solid @text;
 }
 #workspaces button.active {
-    color: @blue;
+    color: @pine;
     border-bottom: 3px solid @blue;
 }
 #workspaces button.empty {
@@ -26,7 +26,7 @@ window#waybar {
 }
 #workspaces button.empty.active {
     color: @text;
-    border-bottom: 3px solid @blue;
+    border-bottom: 3px solid @pine;
 }
 
 #workspaces button.urgent {
@@ -51,37 +51,37 @@ button:hover {
 }
 
 #custom-sep {
-    color: @rosewater;
+    color: @text;
 }
 
 #clock {
-    color: @sky;
-    border-bottom: 4px solid @sky;
+    color: @foam;
+    border-bottom: 4px solid @foam;
 }
 
 #battery {
-    color: @green;
-    border-bottom: 4px solid @green;
+    color: @rose;
+    border-bottom: 4px solid @rose;
 }
 
 #disk {
-    color: @yellow;
-    border-bottom: 4px solid @yellow;
+    color: @gold;
+    border-bottom: 4px solid @gold;
 }
 
 #memory {
-    color: @lavender;
-    border-bottom: 4px solid @lavender;
+    color: @iris;
+    border-bottom: 4px solid @iris;
 }
 
 #cpu {
-    color: @peach;
-    border-bottom: 4px solid @peach;
+    color: @gold;
+    border-bottom: 4px solid @gold;
 }
 
 #network {
-    color: @blue;
-    border-bottom: 4px solid @blue;
+    color: @pine;
+    border-bottom: 4px solid @pine;
 }
 
 #network.disconnected {

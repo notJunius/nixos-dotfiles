@@ -21,15 +21,12 @@
         "custom/sep",
         "network",
         "custom/sep",
-        "cpu",
-        "custom/sep",
-        "memory",
-        "custom/sep",
-        "disk",
-        "custom/sep",
+//        "cpu",
+ //       "custom/sep",
+  //      "memory",
+   //     "custom/sep",
         "clock",
         "custom/sep",
-        "tray"
     ],
 
     // Modules configuration
@@ -39,7 +36,7 @@
         "warp-on-scroll": false,
         "format": "{name}",
         "persistent-workspaces": {
-            "*" : 9
+            "*" : 5
         }
     },
     "hyprland/window" : {
@@ -58,13 +55,13 @@
 				"format": "{:%I:%M}",
         "format-alt": "{:%Y-%m-%d}"
     },
-    "cpu": {
-        "format": "CPU: {usage}%",
-        "tooltip": false
-    },
-    "memory": {
-        "format": "Mem: {used}GiB"
-    },
+ //   "cpu": {
+ //       "format": "CPU: {usage}%",
+  //      "tooltip": false
+  //  },
+ //   "memory": {
+   //     "format": "Mem: {used}GiB"
+   // },
     "disk": {
         "interval": 60,
         "path": "/",
@@ -76,11 +73,11 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "Bat: {capacity}% {icon} {time}",
+        "format": "Bat: {capacity}%",
         "format-plugged": "{capacity}% ",
         "format-alt": "Bat: {capacity}%",
-        "format-time": "{H}:{M}",
-        "format-icons": ["", "", "", "", ""]
+    //  "format-time": "{H}:{M}",
+     //   "format-icons": ["", "", "", "", ""]
     },
     "network": {
         "format": "Online",
