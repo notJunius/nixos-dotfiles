@@ -37,6 +37,10 @@
   programs.hyprland.enable = true;
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
+  #enable openGL for raylib
+  hardware.graphics.enable = true;
+
+
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {

@@ -14,6 +14,7 @@ let
         hypr = "hypr";
         ghostty = "ghostty";
         waybar = "waybar";
+        odin = "odin";
     };
 in
 {
@@ -42,6 +43,7 @@ in
     };
     initExtra = ''
       export PS1="\[\e[38;5;75m\]\u@\h \[\e[38;5;113m\]\w \[\e[38;5;189m\]\$ \[\e[0m\]"
+      export PATH="/home/junius/.config/odin:$PATH"
     '';
   };
 
