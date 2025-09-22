@@ -54,5 +54,7 @@ in
     xwallpaper
     libreoffice
     zathura
+    obsidian
+    love
   ];
 }

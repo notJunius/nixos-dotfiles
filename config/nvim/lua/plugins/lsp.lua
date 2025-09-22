@@ -14,10 +14,18 @@ return {
 		},
 		config = function()
 			local capabilities = require('blink.cmp').get_lsp_capabilities()
-			require("lspconfig").lua_ls.setup { capabilites = capabilities }
-			require("lspconfig").pyright.setup { capabilites = capabilities }
-			require("lspconfig").ols.setup { capabilites = capabilities }
-			require("lspconfig").nil_ls.setup { capabilites = capabilities }
+			vim.lsp.config('lua_ls', {
+				capabilities = capabilities
+			})
+			vim.lsp.config('pyright', {
+				capabilities = capabilities
+			})
+			vim.lsp.config('ols', {
+				capabilities = capabilities
+			})
+			vim.lsp.config('nil_ls', {
+				capabilities = capabilities
+			})
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
