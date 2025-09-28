@@ -14,7 +14,6 @@ let
         hypr = "hypr";
         ghostty = "ghostty";
         waybar = "waybar";
-        odin = "odin";
     };
 in
 {
@@ -42,7 +41,7 @@ in
       nrs = "sudo nixos-rebuild switch --flake ~/nixos-dotfiles#atlas";
     };
     initExtra = ''
-      export PS1="\[\e[38;5;75m\]\u@\h \[\e[38;5;113m\]\w \[\e[38;5;189m\]\$ \[\e[0m\]"
+      export PS1='\u@\h \W \\$ '
       export PATH="/home/junius/.config/odin:$PATH"
     '';
   };
@@ -58,5 +57,7 @@ in
     zathura
     obsidian
     love
+    kdePackages.okular
+    spotify
   ];
 }
