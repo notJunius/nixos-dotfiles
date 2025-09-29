@@ -14,6 +14,7 @@ let
         hypr = "hypr";
         ghostty = "ghostty";
         waybar = "waybar";
+        zathura = "zathura";
     };
 in
 {
@@ -45,6 +46,7 @@ in
       export PATH="/home/junius/.config/odin:$PATH"
     '';
   };
+
 
   home.packages = with pkgs; [
     unzip

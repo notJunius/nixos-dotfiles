@@ -1,4 +1,4 @@
-@import "rose-pine-moon.css";
+@import "everforest.css";
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -13,12 +13,12 @@ window#waybar {
 
 #workspaces button {
     padding: 0 6px;
-    color: @pine;
+    color: @blue;
     background: transparent;
     border-bottom: 3px solid @text;
 }
 #workspaces button.active {
-    color: @pine;
+    color: @blue;
     border-bottom: 3px solid @blue;
 }
 #workspaces button.empty {
@@ -26,7 +26,7 @@ window#waybar {
 }
 #workspaces button.empty.active {
     color: @text;
-    border-bottom: 3px solid @pine;
+    border-bottom: 3px solid @blue;
 }
 
 #workspaces button.urgent {
@@ -55,13 +55,13 @@ button:hover {
 }
 
 #clock {
-    color: @foam;
-    border-bottom: 4px solid @foam;
+    color: @purple;
+    border-bottom: 4px solid @purple;
 }
 
 #battery {
-    color: @rose;
-    border-bottom: 4px solid @rose;
+    color: @orange;
+    border-bottom: 4px solid @orange;
 }
 
 #disk {
@@ -80,8 +80,8 @@ button:hover {
 }
 
 #network {
-    color: @pine;
-    border-bottom: 4px solid @pine;
+    color: @green;
+    border-bottom: 4px solid @green;
 }
 
 #network.disconnected {
