@@ -13,6 +13,7 @@ let
         st = "st";
         hypr = "hypr";
         ghostty = "ghostty";
+        odin = "odin";
         waybar = "waybar";
         zathura = "zathura";
     };
@@ -61,5 +62,9 @@ in
     love
     kdePackages.okular
     spotify
+    obs-studio
+    vlc
+    kdePackages.kdenlive
+    nix-diff
   ];
 }

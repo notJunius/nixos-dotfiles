@@ -7,3 +7,6 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
+
+-- change for current python file
+vim.keymap.set("n", "<space>p", "<cmd>!python3 code/main.py<CR>")

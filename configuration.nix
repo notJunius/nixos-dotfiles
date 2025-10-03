@@ -4,7 +4,6 @@
   imports =
     [ 
       ./hardware-configuration.nix
-
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -39,6 +38,27 @@
 
   #enable openGL for raylib
   hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
+  services.xserver.videoDrivers = ["nvidia"];
+
+  #enable appimage
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = true;
+    nvidiaSettings = true;
+
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    prime = {
+      sync.enable = true;
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
+  };
 
 
   i18n.defaultLocale = "en_US.UTF-8";
@@ -83,9 +103,16 @@
     waybar
     wofi
     kdePackages.dolphin
+    lshw
   ];
 
   programs.firefox.enable = true;
+  programs.steam = {
+  enable = true;
+  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+  };
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
