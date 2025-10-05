@@ -1,4 +1,4 @@
-@import "everforest.css";
+@import "rose-pine-moon.css";
 
 * {
     font-family: "JetBrainsMono Nerd Font", monospace;
@@ -13,20 +13,20 @@ window#waybar {
 
 #workspaces button {
     padding: 0 6px;
-    color: @blue;
+    color: @love;
     background: transparent;
     border-bottom: 3px solid @text;
 }
 #workspaces button.active {
-    color: @blue;
-    border-bottom: 3px solid @blue;
+    color: @love;
+    border-bottom: 3px solid @love;
 }
 #workspaces button.empty {
     color: @text;
 }
 #workspaces button.empty.active {
-    color: @text;
-    border-bottom: 3px solid @blue;
+    color: @love;
+    border-bottom: 3px solid @love;
 }
 
 #workspaces button.urgent {
@@ -55,37 +55,37 @@ button:hover {
 }
 
 #clock {
-    color: @purple;
-    border-bottom: 4px solid @purple;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #battery {
-    color: @orange;
-    border-bottom: 4px solid @orange;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #disk {
-    color: @gold;
-    border-bottom: 4px solid @gold;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #memory {
-    color: @iris;
-    border-bottom: 4px solid @iris;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #cpu {
-    color: @gold;
-    border-bottom: 4px solid @gold;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #network {
-    color: @green;
-    border-bottom: 4px solid @green;
+    color: @text;
+    border-bottom: 4px solid @text;
 }
 
 #network.disconnected {
-    background-color: @red;
+    background-color: @text;
 }
 
 #tray {

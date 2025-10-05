@@ -104,6 +104,7 @@
     wofi
     kdePackages.dolphin
     lshw
+    dunst
   ];
 
   programs.firefox.enable = true;

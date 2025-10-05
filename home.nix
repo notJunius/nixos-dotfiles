@@ -66,5 +66,6 @@ in
     vlc
     kdePackages.kdenlive
     nix-diff
+    discord
   ];
 }

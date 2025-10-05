@@ -10,13 +10,11 @@
         "hyprland/workspaces",
         "custom/sep",
         "hyprland/window",
-        "custom/sep"
     ],
     "modules-center": [
     ],
 
     "modules-right": [
-        "custom/sep",
 				"battery",
         "custom/sep",
         "network",
@@ -26,7 +24,6 @@
   //      "memory",
    //     "custom/sep",
         "clock",
-        "custom/sep",
     ],
 
     // Modules configuration
@@ -84,7 +81,7 @@
         "format-disconnected": "Disconnected ⚠"
     },
     "custom/sep": {
-        "format" : "|",
+        "format" : "::",
         "interval" : 0
     }
 }
