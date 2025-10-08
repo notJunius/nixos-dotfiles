@@ -96,6 +96,7 @@
     wget
     git
     ghostty
+    wezterm
     feh
     hyprpaper
     kitty
@@ -105,6 +106,7 @@
     kdePackages.dolphin
     lshw
     dunst
+    appimage-run
   ];
 
   programs.firefox.enable = true;
