@@ -6,7 +6,7 @@ set.number = true
 set.relativenumber = true
 set.pumheight = 10
 set.cursorline = true
-set.colorcolumn = "80"
+--set.colorcolumn = "80"
 set.scrolloff = 10
 set.updatetime = 50
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
