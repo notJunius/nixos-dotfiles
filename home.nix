@@ -67,5 +67,6 @@ in
     kdePackages.kdenlive
     nix-diff
     discord
+    gimp
   ];
 }
