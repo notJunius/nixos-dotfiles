@@ -51,6 +51,7 @@ in
 
   home.packages = with pkgs; [
     unzip
+    zip
     pavucontrol
     rofi 
     slock
@@ -68,5 +69,6 @@ in
     nix-diff
     discord
     gimp
+    davinci-resolve
   ];
 }

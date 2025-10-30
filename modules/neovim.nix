@@ -17,6 +17,7 @@
 
     # Needed for lazy.nvim
     nodejs
+
   ];
 
   programs.neovim = {
