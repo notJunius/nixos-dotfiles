@@ -29,7 +29,7 @@
   "clock": {
     "timezone": "America/Denver",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%d - %H:%M}"
+    "format": "{:%d - %I:%M}"
   },
   "network": {
     "format-wifi": "󰤢 ",

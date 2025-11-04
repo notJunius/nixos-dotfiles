@@ -47,6 +47,12 @@ in
       export PATH="/home/junius/.config/odin:$PATH"
     '';
   };
+  home.pointerCursor = {
+    gtk.enable = true;
+    package = pkgs.apple-cursor;
+    name = "macOS Cursors";
+    size = 16;
+  };
 
 
   home.packages = with pkgs; [
