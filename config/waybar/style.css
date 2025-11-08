@@ -1,23 +1,19 @@
-@import "everforest.css";
+@import "kanagawa.css";
 
 * {
   font-family: JetbrainsMono Nerd Font;
-  font-size: 20px;
+  font-size: 16px;
   min-height: 0;
   padding-right: 2px;
   padding-left: 2px;
-  padding-bottom: 0px;
 }
 
 #waybar {
-  background: transparent;
+  background: @base;
   color: @base;
-  margin: 2px 2px;
 }
 
 #workspaces {
-  border-radius: 5px;
-  margin: 5px;
   background: @base;
   margin-left: 1rem;
 }
@@ -75,13 +71,11 @@
 }
 
 #memory {
-  border-radius: 0px 5px 5px 0px;
 	color: @text;
 }
 
 #clock {
   color: @text;
-  border-radius: 5px;
   margin-right: 1rem;
 }
 
@@ -103,28 +97,23 @@
 
 #backlight,
 #battery {
-  border-radius: 0;
 }
 
 #pulseaudio {
   color: @text;
-  border-radius: 5px 0px 0px 5%;
   margin-left: 1rem;
 }
 
 #custom-music {
   color: #ca9ee6;
-  border-radius: 5px;
 }
 
 #custom-lock {
-  border-radius: 5px 0px 0px 5px;
   color: @text;
 }
 
 #custom-power {
   margin-right: 1rem;
-  border-radius: 0px 5px 5px 0px;
   color: @text;
 }
 
@@ -140,7 +129,6 @@
 #tray {
   margin-right: 1rem;
   margin-left: 1rem;
-  border-radius: 5px;
 	color: @text;
 }
 

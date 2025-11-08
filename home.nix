@@ -51,7 +51,7 @@ in
     gtk.enable = true;
     package = pkgs.apple-cursor;
     name = "macOS Cursors";
-    size = 16;
+    size = 24;
   };
 
 
