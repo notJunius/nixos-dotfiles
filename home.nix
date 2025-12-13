@@ -75,6 +75,7 @@ in
     nix-diff
     discord
     gimp
-    davinci-resolve
+    transmission_4-qt
+    popsicle
   ];
 }
