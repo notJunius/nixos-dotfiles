@@ -73,7 +73,6 @@ in
     nix-diff
     discord
     gimp
-    transmission_4-qt
-    popsicle
+    go
   ];
 }

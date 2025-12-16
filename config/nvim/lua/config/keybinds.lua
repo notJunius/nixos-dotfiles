@@ -12,4 +12,4 @@ vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
 
 -- change for current python file
-vim.keymap.set("n", "<space>p", "<cmd>!python3 main.py<CR>")
+vim.keymap.set("n", "<space>p", "<cmd>!go run .<CR>")

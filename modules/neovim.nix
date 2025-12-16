@@ -1,4 +1,9 @@
-{config, pkgs, lib, ...}:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   # Install Neovim and dependencies
@@ -14,6 +19,7 @@
     pyright
     nil # nix language server
     nixpkgs-fmt # nix formatter
+    gopls
 
     # Needed for lazy.nvim
     nodejs
