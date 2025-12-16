@@ -1,22 +1,21 @@
 { config, pkgs, ... }:
 
-
 let
-    dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
-    create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
-    # Standard .config/directory
-    configs = {
-        qtile = "qtile";
-        nvim = "nvim";
-        dwm = "dwm";
-        dmenu = "dmenu";
-        st = "st";
-        hypr = "hypr";
-        ghostty = "ghostty";
-        odin = "odin";
-        waybar = "waybar";
-        zathura = "zathura";
-    };
+  dotfiles = "${config.home.homeDirectory}/nixos-dotfiles/config";
+  create_symlink = path: config.lib.file.mkOutOfStoreSymlink path;
+  # Standard .config/directory
+  configs = {
+    qtile = "qtile";
+    nvim = "nvim";
+    dwm = "dwm";
+    dmenu = "dmenu";
+    st = "st";
+    hypr = "hypr";
+    ghostty = "ghostty";
+    odin = "odin";
+    waybar = "waybar";
+    zathura = "zathura";
+  };
 in
 {
   imports = [
@@ -25,8 +24,8 @@ in
   ];
 
   xdg.configFile = builtins.mapAttrs (name: subpath: {
-      source = create_symlink "${dotfiles}/${subpath}";
-      recursive = true;
+    source = create_symlink "${dotfiles}/${subpath}";
+    recursive = true;
   }) configs;
   home.username = "junius";
   home.homeDirectory = "/home/junius";
@@ -35,7 +34,7 @@ in
     userName = "notJunius";
     userEmail = "120129256+notJunius@users.noreply.github.com";
   };
-  home.stateVersion = "25.05";
+  home.stateVersion = "25.11";
   programs.bash = {
     enable = true;
     shellAliases = {
@@ -54,12 +53,11 @@ in
     size = 24;
   };
 
-
   home.packages = with pkgs; [
     unzip
     zip
     pavucontrol
-    rofi 
+    rofi
     slock
     xclip
     xwallpaper

@@ -1,10 +1,14 @@
-{ config, lib,  pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -39,7 +43,7 @@
   #enable openGL for raylib
   hardware.graphics.enable = true;
   hardware.graphics.enable32Bit = true;
-  services.xserver.videoDrivers = ["nvidia"];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   #enable appimage
   programs.appimage.enable = true;
@@ -59,7 +63,6 @@
       nvidiaBusId = "PCI:1:0:0";
     };
   };
-
 
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -83,8 +86,11 @@
   users.users.junius = {
     isNormalUser = true;
     description = "morgan";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [ ];
   };
 
   services.getty.autologinUser = "junius";
@@ -111,16 +117,19 @@
 
   programs.firefox.enable = true;
   programs.steam = {
-  enable = true;
-  remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-  dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    enable = true;
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
   ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  system.stateVersion = "25.05";
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  system.stateVersion = "25.11";
 }
