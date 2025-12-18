@@ -74,5 +74,7 @@ in
     discord
     gimp
     go
+    godot
+    popsicle
   ];
 }
