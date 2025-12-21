@@ -12,7 +12,6 @@ let
     st = "st";
     hypr = "hypr";
     ghostty = "ghostty";
-    odin = "odin";
     waybar = "waybar";
     zathura = "zathura";
   };
